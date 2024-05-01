@@ -14,11 +14,12 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Car {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String brand;
-    private String model;
+    private String placa;
+    private String marca;
+    private String color;
+    private String modelo;
     private int userId;
 }

@@ -8,6 +8,15 @@ eureka:
       default-zone: http://localhost:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+#Cabeceras HTTP
 spring:
   application:
     zipkin: http://localhost:9411
+
+
+# Configuración de la conexión a Kafka para el envío de eventos
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092

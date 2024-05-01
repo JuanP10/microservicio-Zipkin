@@ -26,6 +26,11 @@ public class BikeService {
         return bikeNew;
     }
 
+    public List<Bike> byColor(String color) {
+        return bikeRepository.findByColor(color);
+    }
+
+
     public List<Bike> byUserId(int userId) {
         return bikeRepository.findByUserId(userId);
     }

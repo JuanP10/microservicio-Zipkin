@@ -64,6 +64,29 @@
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
 		</dependency>
 
+		<!-- Dependencia para Zipkin -->
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+		</dependency>
+
+
+		<!-- Dependencia para Sleuth -->
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+
+
+		<!-- Dependencia para Kafka -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 
 		<dependency>
 			<groupId>com.h2database</groupId>

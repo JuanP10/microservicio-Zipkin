@@ -15,10 +15,10 @@ import javax.persistence.Id;
 @AllArgsConstructor
 public class Bike {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String brand;
-    private String model;
-    private int userId;
+    private String placa;
+    private String modelo;
+    private String marca;
+    private String color;
 }

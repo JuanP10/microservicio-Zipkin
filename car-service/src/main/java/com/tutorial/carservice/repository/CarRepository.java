@@ -10,4 +10,6 @@ import java.util.List;
 public interface CarRepository extends JpaRepository<Car, Integer> {
 
     List<Car> findByUserId(int userId);
+    List<Carro> findByColor(String color);
+    List<Carro> findByPlaca(String placa);
 }

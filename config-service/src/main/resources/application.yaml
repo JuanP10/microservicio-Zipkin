@@ -1,12 +1,22 @@
-server:
-  port: 8081
+# Kafka
 spring:
   cloud:
-    config:
-      server:
-        git:
-          default-label: zipkin-sleuth
-          uri: https://github.com/cavanosa/microservices-tutorial
-          search-paths: config-data
-  application:
-    name: config-service
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        zipkin:
+          destination: zipkin
+          content-type: application/json
+    # Configuración del servidor Spring Cloud Config.
+    # config:
+    #   server:
+    #     git:
+    #       uri: https://github.com/cavanosa/microservices-tutorial
+    #       default-label: zipkin-sleuth
+    #       search-paths: config-data
+
+  # zipkin:
+  #   sender:
+  #     type: kafka

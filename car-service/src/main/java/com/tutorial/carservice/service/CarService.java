@@ -26,6 +26,15 @@ public class CarService {
         return carNew;
     }
 
+    public List<Carro> byColor(String color) {
+        return carRepository.findByColor(color);
+    }
+
+    public List<Carro> byPlaca(String placa) {
+        return carRepository.findByPlaca(placa);
+    }
+
+
     public List<Car> byUserId(int userId) {
         return carRepository.findByUserId(userId);
     }

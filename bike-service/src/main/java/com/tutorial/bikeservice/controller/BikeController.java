@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/bike")
+@RequestMapping("microserver/api/v1/bike")
 public class BikeController {
 
     @Autowired
@@ -40,6 +40,12 @@ public class BikeController {
     @GetMapping("/byuser/{userId}")
     public ResponseEntity<List<Bike>> getByUserId(@PathVariable("userId") int userId) {
         List<Bike> bikes = bikeService.byUserId(userId);
+        return ResponseEntity.ok(bikes);
+    }
+
+    @GetMapping("/color")
+    public ResponseEntity<List<Bike>> getByColor(@RequestParam("color") String color) {
+        List<Bike> bikes = bikeService.byColor(color);
         return ResponseEntity.ok(bikes);
     }
 

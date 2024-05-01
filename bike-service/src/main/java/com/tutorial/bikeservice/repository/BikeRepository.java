@@ -10,4 +10,6 @@ import java.util.List;
 public interface BikeRepository extends JpaRepository<Bike, Integer> {
 
     List<Bike> findByUserId(int userId);
+
+    List<Bike> findByColor(String color);
 }

@@ -38,7 +38,16 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 5s
             failureRateThreshold: 50
             eventConsumerBufferSize: 10
+#Cabeceras HTTP
 spring:
   application:
     zipkin: http://localhost:9411
+
+
+  # Configuración de la conexión a Kafka para el envío de eventos
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
             

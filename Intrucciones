@@ -1,0 +1,27 @@
+// Zipkin (Cabeceras HTTP)
+
+1. Agregar dependencias en el pom.xml. (user service)
+2. Configuración de Sleuth y Zipkin en el properties o yml
+3. Descargar el jar de zipkin y montar en el proyecto
+4. Indicar la URL del servidor Zipkin al que se enviarán los datos de rastreo desde la aplicación Spring Boot En cada yml de configuración de cada servicio.    (Config Data)
+5. Ejecutamos jar y los servicios (Config, Eureka, Bike, Car, User, Gateway)
+6. http://localhost:8761/    y   http://localhost:9411/zipkin/
+
+
+
+// Broker de mensajes (Kafka)
+
+1.	Agregar dependencia de Kafka
+2.	Configura la conexión a Kafka (yaml)
+3.	Configuración de Sleuth para enviar trazas a Kafka (Config Data)
+4.	Descargar y descomprimir Kafka en su pagina
+5.	Abrir el CMD en la la carpeta de Kafka
+6.	Iniciar el servidor de ZooKeeper:
+bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+7.	Iniciar el servidor de Kafka:
+bin\windows\kafka-server-start.bat config\server.properties
+8.	Enviar mensajes a un tema Kafka (Productor):
+kafka-console-producer --bootstrap-server localhost:9092 --topic mi-tema
+9.	Leer mensajes de un tema Kafka (Consumidor):
+kafka-console-consumer --bootstrap-server localhost:9092 --topic mi-tema --from-beginning
+
